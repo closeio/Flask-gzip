@@ -15,6 +15,7 @@ class Gzip(object):
 
         if response.status_code < 200 or \
            response.status_code >= 300 or \
+           response.direct_passthrough or \
            len(response.data) < self.minimum_size or \
            'gzip' not in accept_encoding.lower() or \
            'Content-Encoding' in response.headers:
