@@ -1,5 +1,9 @@
 import gzip
-import StringIO
+try:
+    from io import BytesIO
+except ImportError:
+    from StringIO import StringIO as BytesIO
+
 from flask import request
 
 
@@ -20,7 +24,7 @@ class Gzip(object):
            'Content-Encoding' in response.headers:
             return response
 
-        gzip_buffer = StringIO.StringIO()
+        gzip_buffer = BytesIO()
         gzip_file = gzip.GzipFile(mode='wb', compresslevel=self.compress_level, fileobj=gzip_buffer)
         gzip_file.write(response.data)
         gzip_file.close()
