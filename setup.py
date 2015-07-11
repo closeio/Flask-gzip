@@ -10,7 +10,7 @@ from setuptools import setup
 setup(
     name='Flask-gzip',
     version='0.1',
-    url='https://github.com/elasticsales/flask-gzip',
+    url='https://github.com/closeio/flask-gzip',
     license='BSD',
     author='Anthony Nemitz',
     author_email='anemitz@gmail.com',
