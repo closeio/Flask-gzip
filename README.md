@@ -13,7 +13,7 @@ Set Up
 
 ```python
 from flask import Flask
-from flask.ext.gzip import Gzip
+from flask_gzip import Gzip
 
 app = Flask(__name__)
 gzip = Gzip(app)
