@@ -9,11 +9,11 @@ from setuptools import setup
 
 setup(
     name='Flask-gzip',
-    version='0.1',
+    version='0.2',
     url='https://github.com/closeio/flask-gzip',
     license='BSD',
-    author='Anthony Nemitz',
-    author_email='anemitz@gmail.com',
+    author='Close Engineering',
+    author_email='engineering@close.com',
     description='Compress responses in your Flask app with gzip.',
     long_description=__doc__,
     py_modules=['flask_gzip'],
